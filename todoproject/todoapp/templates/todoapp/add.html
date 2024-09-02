@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add Tasks</title>
+</head>
+<body>
+	<h1>Add Tasks</h1>
+	<form action="{% url 'addtask'%}" method="POST">
+		{% csrf_token %}
+		<label for="title">Task Name</label>
+		<input type="text" id="title" name="title">
+		<input type="submit" name="submit" value="Submit">
+	</form>
+
+</body>
+</html>
